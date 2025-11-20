@@ -1,0 +1,24 @@
+.section{position:relative}
+
+.section::before{
+  content:"";position:absolute;
+  inset:-24px -16px auto -16px;height:1px;
+  background:linear-gradient(90deg,rgba(14,165,233,.25),rgba(139,92,246,.25));
+}
+
+.hero{position:relative;
+      isolation:isolate}
+      
+.hero::after{
+  content:"";position:absolute;inset:-20px;z-index:-1;border-radius:22px;
+  background:radial-gradient(600px 300px at 85% 20%,rgba(14,165,233,.18),transparent 60%),
+             radial-gradient(600px 300px at 10% 100%,rgba(139,92,246,.18),transparent 60%);
+  filter:saturate(120%)
+}
+.form .actions{margin-top:4px;display:flex;gap:10px;flex-wrap:wrap}
+
+.table thead th{font-weight:700}
+
+.table th:first-child,.table td:first-child{padding-left:16px}
+
+.table th:last-child,.table td:last-child{padding-right:16px}
