@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tasks App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles/utilities.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/tasks.css" />
+  <link rel="stylesheet" href="styles/settings.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Tasks App</div>
+
+    <nav class="tabs">
+      <button class="tab tab-active" id="tab-home" onclick="showSection('home', this)">Home</button>
+      <button class="tab" id="tab-tasks" onclick="showSection('tasks', this)">Tasks</button>
+      <button class="tab" id="tab-settings" onclick="showSection('settings', this)">Settings</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="section section-active">
+      <div class="home-box">
+
+        <div class="home-text">
+          <h1 id="home-title">Welcome to Tasks App</h1>
+          <p id="home-subtitle">You have no completed tasks yet.</p>
+
+          <div class="home-search">
+            <input id="search-input" class="home-search-input"
+                   type="text" placeholder="Search a task..."
+                   onkeyup="onSearchChange()">
+          </div>
+
+          <div class="home-tags">
+            <div id="chip-all" class="home-tag home-tag-all home-tag-active"
+                 onclick="activateChip('all')">All</div>
+
+            <div id="chip-todo" class="home-tag home-tag-todo"
+                 onclick="activateChip('todo')">To-Do</div>
+
+            <div id="chip-done" class="home-tag home-tag-done"
+                 onclick="activateChip('done')">Done</div>
+          </div>
+
+          <button class="btn" onclick="goToTasks()">Get Started</button>
+        </div>
+
+        <img src="assets/task.jpg" class="home-img" alt="hero">
+      </div>
+    </section>
+
+    <!-- TASKS -->
+    <section id="tasks" class="section">
+      <h2>Your Tasks</h2>
+      <p class="section-subtitle">Add tasks and mark them as done.</p>
+
+      <form class="task-form" onsubmit="return addTask()">
+        <input id="task-input" type="text" placeholder="Enter new task..." autocomplete="off">
+        <button class="btn" type="submit">Add</button>
+      </form>
+
+      <p id="task-stats" class="task-stats"></p>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="section">
+      <h2>Settings</h2>
+      <p class="section-subtitle">Update your profile and see your progress.</p>
+
+      <div class="settings-box">
+
+        <form class="settings-form" onsubmit="return saveSettings()">
+          <label>Name</label>
+          <input id="name-input" type="text" placeholder="Your name">
+
+          <label>Email</label>
+          <input id="email-input" type="email" placeholder="you@example.com">
+
+          <button class="btn" type="submit">Save</button>
+        </form>
+
+        <div class="user-card">
+          <h3 id="card-name">Guest</h3>
+          <p id="card-email">—</p>
+          <p>Completed tasks: <span id="card-count">0</span></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/tasks.js"></script>
+  <script src="scripts/settings.js"></script>
+</body>
+</html>
