@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamad Issa · Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="Style/utlities.css" rel="stylesheet">
+  <link href="Style/index.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html" aria-label="Home">MI</a>
+      <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-sm" href="Pages/page1.html">About Page →</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br><br>
+  <main>
+    <!-- Hero -->
+    <section id="about" class="hero container">
+      <div class="hero-text">
+        <h1 class="headline">Hello, I’m <span class="accent">Mohamad Issa</span></h1>
+        <p class="subhead">
+          Web developer who enjoys building dynamic and user-friendly websites.
+           My work focuses on clean structure, functional code, and simple design that performs well on any device.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#contact">Hire Me</a>
+          <a class="btn2" href="Pages/page1.html">More About Me</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="Image/hero.jpg" alt="Hero image" class="img-cover">
+      </figure>
+    </section>
+
+    <!-- Skills (expanded) -->
+    <section id="skills" class="container section">
+      <header class="section-head">
+        <h2>Skills</h2>
+        <p class="muted">Core stack and supporting tools.</p>
+      </header>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Frontend</h3>
+          <ul class="list">
+            <li>HTML, CSS, JavaScript</li>
+            <li>Semantic markup and accessibility basics</li>
+            <li>Responsive layouts with Flex/Grid</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Backend</h3>
+          <ul class="list">
+            <li>PHP</li>
+            <li>restful patterns, simple auth flows</li>
+            <li>Validation and error handling</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Database & Tools</h3>
+          <ul class="list">
+            <li>MySQL, SQL design and indexes</li>
+            <li>Git, GitHub, VS Code</li>
+            <li>Basic Linux CLI and hosting</li>
+          </ul>
+        </article>
+      </div>
+        <br>
+      <div class="table-wrap card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Category</th><th>Technology</th><th>Level</th><th>Years</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Frontend</th><td>HTML, CSS, JS</td><td>Advanced</td><td>3</td></tr>
+            <tr><th>Backend</th><td>PHP</td><td>Advanced</td><td>2</td></tr>
+            <tr><th>Database</th><td>MySQL</td><td>Intermediate</td><td>2</td></tr>
+            <tr><th>Tools</th><td>Git, VS Code</td><td>Intermediate</td><td>1</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="4" class="muted">Levels reflect recent work focus.</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container section">
+      <header class="section-head">
+        <h2>Featured Projects</h2>
+        <p class="muted">Recent builds with brief details.</p>
+      </header>
+
+      <div class="grid-3">
+        <article class="project card">
+          <h3>Ultra Tech</h3>
+          <p>E-commerce platform with product shipping, cart, and checkout.</p>
+          <div class="tags">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Auth</span>
+          </div>
+        </article>
+        <article class="project card">
+          <h3>Study Planner</h3>
+          <p>Python CLI to schedule focused study blocks and track progress.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">CLI</span>
+          </div>
+        </article>
+        <article class="project card">
+          <h3>Personal Dashboard</h3>
+          <p>Lightweight widgets for notes, todos, and shortcuts.</p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container section">
+      <header class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Send a quick message. This is a demo form.</p>
+      </header>
+
+      <form class="form card" onsubmit="event.preventDefault(); alert('Message sent (demo).'); this.reset();">
+        <div class="grid-2">
+          <label class="field">Name
+            <input type="text" placeholder="Your full name" required>
+          </label>
+          <label class="field">Email
+            <input type="email" placeholder="you@example.com" required>
+          </label>
+        </div>
+        <label class="field">Message
+          <textarea rows="5" placeholder="Tell me about your project" required></textarea>
+        </label>
+        <div class="actions">
+          <button class="btn" type="submit">Send</button>
+          <a class="btn btn-ghost" href="#top">Back to top</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h4 class="footer-title">About</h4>
+        <p class="muted small">I build practical web products with clean structure and simple, fast UIs.</p>
+      </section>
+      <section>
+        <h4 class="footer-title">Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="Pages/page1.html">About Page</a></li>
+        </ul>
+      </section>
+      <section>
+        <h4 class="footer-title">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:mohamadbakerissa88@gmail.com">mohamadbakerissa88@gmail.com</a></li>
+          <li><a href="https://github.com/mohamadbaqer7" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <small>© 2025 Mohamad Issa</small>
+      </section>
+    </div>
+  </footer>
+
+</body>
+</html>
