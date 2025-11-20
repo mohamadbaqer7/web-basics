@@ -1,0 +1,40 @@
+.home-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.home-text h1 {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+
+.home-text p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.home-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+  background: linear-gradient(135deg, #a5b4fc, #f97373);
+}
+
+/* fallback لو ما في صورة حقيقية */
+.home-img:not([src]) {
+  min-height: 180px;
+}
+
+@media (max-width: 768px) {
+  .home-box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-text h1 {
+    font-size: 1.6rem;
+  }
+}

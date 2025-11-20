@@ -1,0 +1,56 @@
+.settings-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: 22px;
+  margin-top: 12px;
+}
+
+/* FORM */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-form label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.settings-form input {
+  padding: 8px 11px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: var(--text-main);
+}
+
+/* USER CARD */
+
+.user-card {
+  background: linear-gradient(135deg, #eef2ff, #fefce8);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.user-card h3 {
+  margin: 0 0 4px;
+}
+
+.user-card p {
+  margin: 2px 0;
+  color: var(--text-muted);
+}
+
+.user-card span {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+
+@media (max-width: 768px) {
+  .settings-box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
